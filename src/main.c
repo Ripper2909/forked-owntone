@@ -517,7 +517,7 @@ main(int argc, char **argv)
 
       { "mdns-no-rsp",  0, NULL, 512 },
       { "mdns-no-daap", 0, NULL, 513 },
-      { "mdns-no-cname",0, NULL, 514 },
+      { "mdns-no-cname",0, NULL, 'n' },
       { "mdns-no-web",  0, NULL, 515 },
 
       { NULL,           0, NULL, 0 }
@@ -533,10 +533,10 @@ main(int argc, char **argv)
   ffid = NULL;
   mdns_no_rsp = false;
   mdns_no_daap = false;
-  mdns_no_cname = false;
+  mdns_no_cname = true;
   mdns_no_web = false;
 
-  while ((option = getopt_long(argc, argv, "D:d:c:P:fb:vw:", option_map, NULL)) != -1)
+  while ((option = getopt_long(argc, argv, "D:d:c:P:fb:vw:n:", option_map, NULL)) != -1)
     {
       switch (option)
 	{
@@ -548,8 +548,8 @@ main(int argc, char **argv)
 	    mdns_no_daap = true;
 	    break;
 
-	  case 514:
-	    mdns_no_cname = true;
+	  case 'n':
+	    mdns_no_cname = false;
 	    break;
 
 	  case 515:
