@@ -1,0 +1,306 @@
+
+@import 'bulma';
+@import '~bulma-switch';
+
+
+.slider {
+  min-width: 250px;
+  width: 100%;
+}
+.range-slider-fill {
+  background-color: hsl(0, 0%, 21%);
+}
+
+.track-progress {
+  margin: 0;
+  padding: 0;
+  min-width: 250px;
+  width: 100%;
+}
+
+.track-progress .range-slider-knob {
+  visibility: hidden;
+}
+
+.track-progress .range-slider-fill {
+  background-color: hsl(217, 71%, 53%);
+  height: 2px;
+}
+
+.track-progress .range-slider-rail {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.media.with-progress h2:last-of-type {
+  margin-bottom: 6px;
+}
+
+.media.with-progress {
+  margin-top: 0px;
+}
+
+a.navbar-item {
+  outline: 0;
+  line-height: 1.5;
+  padding: .5rem 1rem;
+}
+
+.fd-expanded {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.fd-margin-left-auto {
+  margin-left: auto;
+}
+
+.fd-has-action {
+  cursor: pointer;
+}
+
+.fd-is-movable {
+  cursor: move;
+}
+
+.fd-has-margin-top {
+  margin-top: 24px;
+}
+
+.fd-has-margin-bottom {
+  margin-bottom: 24px;
+}
+
+.fd-remove-padding-bottom {
+  padding-bottom: 0;
+}
+
+.fd-has-padding-left-right {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.fd-is-square .button {
+  height: 27px;
+  min-width: 27px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.fd-is-text-clipped {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fd-tabs-section {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  background: white;
+  top: 3.25rem;
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+}
+
+section.fd-tabs-section + section.fd-content {
+  margin-top: 24px;
+}
+
+section.hero + section.fd-content {
+  padding-top: 0;
+}
+
+.fd-progress-bar {
+  top: 52px !important;
+}
+
+.fd-has-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Set minimum height to hide "option" section */
+.fd-content-with-option {
+  min-height: calc(100vh - 3.25rem - 3.25rem - 5rem);
+}
+
+/* Now playing page */
+.fd-is-fullheight {
+  height: calc(100vh - 3.25rem - 3.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fd-is-fullheight .fd-is-expanded {
+  max-height: calc(100vh - 25rem);
+  padding: 1.5rem;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  /* Use flex box to properly size children */
+  display: flex;
+}
+
+.fd-cover-image {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  /* Allow flex item to shrink smaller than its content size: https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size */
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+
+  /* Padding matches the drop-shadow size of the image */
+  padding: 10px;
+}
+
+.fd-cover-image img {
+  /* Use object-fit to properly size the cover artwork: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0px 0px 1px rgba(0,0,0,.3)) drop-shadow(0px 0px 10px rgba(0,0,0,.3));
+
+  /* Allow flex item to grow/shrink to fill the whole container size */
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  /* Unset height/width to allow flex sizing */
+  height: unset;
+  width: unset;
+  max-width: unset;
+  max-height: unset;
+
+  /* Allow flex item to shrink smaller than its content size: https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size */
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+
+.sortable-chosen .media-right {
+  visibility: hidden;
+}
+.sortable-ghost h1, .sortable-ghost h2 {
+  color: hsl(348, 100%, 61%) !important;
+}
+
+.media:first-of-type {
+  padding-top: 17px;
+  margin-top: 16px;
+}
+
+/* Transition effect */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/* Now playing progress bar */
+.seek-slider {
+  min-width: 250px;
+  max-width: 500px;
+  width: 100% !important;
+}
+.seek-slider .range-slider-fill {
+  background-color: hsl(171, 100%, 41%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.seek-slider .range-slider-knob {
+  width: 10px;
+  height: 10px;
+  background-color: hsl(171, 100%, 41%);
+  border-color: hsl(171, 100%, 41%);
+}
+
+/* Add a little bit of spacing between title and subtitle */
+.title:not(.is-spaced) + .subtitle {
+  margin-top: -1.3rem !important;
+}
+.title:not(.is-spaced) + .subtitle + .subtitle {
+  margin-top: -1.3rem !important;
+}
+
+/* Only scroll content if modal contains a card component */
+.fd-modal-card {
+  overflow: visible;
+}
+.fd-modal-card .card-content {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+.fd-modal-card .card {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.dropdown-item a {
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: hsl(0, 0%, 96%)
+}
+
+.navbar-item .fd-navbar-item-level2 {
+  padding-left: 1.5rem;
+}
+hr.fd-navbar-divider {
+  margin: 12px 0;
+}
+
+/* Show scrollbar for navbar menu in desktop mode if content exceeds the screen size */
+@media only screen and (min-width: 1024px) {
+  .navbar-dropdown {
+    max-height: calc(100vh - 3.25rem - 3.25rem - 2rem);
+    overflow: auto;
+  }
+}
+
+/* Limit the size of the bottom navbar menu to not be displayed behind the Safari browser menu on iOS */
+.fd-bottom-navbar .navbar-menu {
+  max-height: calc(100vh - 3.25rem - 3.25rem - 1rem);
+  overflow: scroll;
+}
+
+
+.buttons {
+  @include mobile {
+      &.fd-is-centered-mobile {
+        justify-content: center;
+        &:not(.has-addons) {
+          .button:not(.is-fullwidth) {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+  }
+}
+
+.column {
+  &.fd-has-cover {
+    max-height: 150px;
+    max-width: 150px;
+    @include mobile {
+      margin: auto;
+    }
+    @include from($tablet) {
+      margin: auto 0 auto auto;
+    }
+  }
+}
+
+.fd-overlay-fullscreen {
+  @extend .is-overlay;
+  z-index:25;
+  background-color: rgba(10, 10, 10, 0.2);
+  position: fixed;
+}
+
+.hero-body {
+  padding: 1.5rem !important;
+}
